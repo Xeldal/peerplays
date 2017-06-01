@@ -95,7 +95,7 @@ Compare this result to
 ```
 dump_private_keys
 ```
-You should see 3 pairs of keys. The last pair should match your block_signing_key and this is the one you will use in the next step!
+You should see 3 pairs of keys. The first pair should match your block_signing_key and this is the one you will use in the next step!
 
 Get your witness id
 -----------------
@@ -110,7 +110,7 @@ Comment out the existing private-key before adding yours
 vim witness_node_data_dir/config.ini
 
 witness-id = "1.6.x"
-private-keys = ['block_signing_key','private_key_for_your_block_signing_key']
+private-key = ["block_signing_key","private_key_for_your_block_signing_key"]
 ```
 
 start your witness back up
